@@ -51,7 +51,7 @@ function setup() {
   ground = createSprite(200,180,400,20);
   ground.addImage("ground",groundImage);
   ground.x = ground.width /2;
-  ground.velocityX = -4;
+  
   
   invisibleGround = createSprite(200,190,400,10);
   invisibleGround.visible = false;
@@ -67,6 +67,7 @@ function draw() {
   text("Score: "+ score, 500,50);
   if(gameState == PLAY){
   score = score + Math.round(getFrameRate()/60);
+  ground.velocityX = -4;
   
   
   
